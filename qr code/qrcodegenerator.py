@@ -1,6 +1,7 @@
 import tkinter as tk
 import pyautogui as pg
 from tkinter import ttk
+import sv_ttk
 from pyqrcode import QRCode
 
 root = tk.Tk()
@@ -13,6 +14,8 @@ ry = reso[1]
 x = int((rx / 2) - (1000 / 2))
 y = int((ry / 2) - (500 / 2))
 root.geometry("320x100" + f"+{x}+{y}")
+
+sv_ttk.set_theme('dark')
 
 def generate(d):
     n = QRCode(d)

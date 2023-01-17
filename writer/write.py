@@ -1,14 +1,15 @@
 from tkinter import *
 from tkinter import ttk
 import pyautogui as pyg, time
+import sv_ttk
 
 root = Tk()
-root.tk.call("source", "sv.tcl")
-root.tk.call("set_theme", 'dark')
-root.geometry('585x480')
+root.geometry('665x480')
 root.title("Writer")
 root.resizable(0,0)
     
+sv_ttk.set_theme('dark')  
+
 def write(content):
     time.sleep(5)
     pyg.typewrite(content)
